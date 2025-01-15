@@ -76,7 +76,7 @@
       <div class="section-header">
         <div style="display: flex; align-items: center; gap: 10px">
           <h2>Deals of the Day</h2>
-          <span class="timer">22:07:36 Left</span>
+          <span class="timer" id="timer">22:07:36 Left</span>
         </div>
         <a href="#" class="view-all">VIEW ALL</a>
       </div>
@@ -247,5 +247,31 @@
         </a>
       </div>
     </section>
+    <script>
+      function startTimer(duration, display) {
+        let timer = duration, hours, minutes, seconds;
+        setInterval(function () {
+          hours = parseInt(timer / 3600, 10);
+          minutes = parseInt((timer % 3600) / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          hours = hours < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = hours + ":" + minutes + ":" + seconds + " Left";
+
+          if (--timer < 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        const timerElement = document.getElementById('timer');
+        const time = 22 * 3600 + 7 * 60 + 36;
+        startTimer(time, timerElement);
+      };
+    </script>
   </body>
 </html>
