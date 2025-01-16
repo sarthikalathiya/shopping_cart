@@ -114,6 +114,9 @@
   white-space: nowrap;
 }
 
+.nav-container::-webkit-scrollbar{
+  display: none;
+}
 .nav-item {
   display: inline-flex;
   flex-direction: column;
