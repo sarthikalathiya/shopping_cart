@@ -68,6 +68,10 @@
   cursor: pointer;
 }
 
+.search-container button i {
+    font-size: 16px;
+}
+
 .login-btn {
   background-color: white;
   color: #2874f0;
@@ -97,6 +101,10 @@
   gap: 4px;
 }
 
+.nav-links a i {
+    font-size: 16px;
+}
+
 /* Category Navigation */
 .category-nav {
   background-color: white;
@@ -114,9 +122,10 @@
   white-space: nowrap;
 }
 
-.nav-container::-webkit-scrollbar{
+.nav-container::-webkit-scrollbar {
   display: none;
 }
+
 .nav-item {
   display: inline-flex;
   flex-direction: column;
@@ -181,12 +190,15 @@
   padding: 20px 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .product-grid::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none;
+  /* Chrome, Safari and Opera */
 }
 
 .deals-ad {
@@ -248,12 +260,12 @@
 }
 
 body {
-  background-color: #f1f3f6; /* Light gray background for the body */
+  background-color: #f1f3f6;
+  /* Light gray background for the body */
 }
 
 @media (max-width: 768px) {
-  .header-container {
-  }
+  .header-container {}
 
   .product-card {
     min-width: 200px;
