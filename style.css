@@ -134,6 +134,9 @@
   max-width: 1248px;
   margin: 20px auto;
   padding: 0 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
 }
 
 .section-header {
@@ -158,19 +161,41 @@
   text-decoration: none;
 }
 
+.product-link {
+  text-decoration: none;
+  color: black;
+}
 
-
-.product-link{
-    text-decoration: none;
-    color: black;
+.deals-container {
+  display: flex;
+  gap: 20px;
 }
 
 .product-grid {
+  flex: 1;
   display: flex;
   gap: 20px;
   padding: 20px 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.product-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.deals-ad {
+  width: 230px;
+  min-width: 230px;
+  padding: 20px 0;
+}
+
+.deals-ad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .product-card {
@@ -219,24 +244,12 @@
   font-family: Arial, sans-serif;
 }
 
+body {
+  background-color: #f1f3f6; /* Light gray background for the body */
+}
+
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .search-container {
-    width: 100%;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .product-grid {
-    display: flex;
-    overflow-x: auto;
   }
 
   .product-card {
