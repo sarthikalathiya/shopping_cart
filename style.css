@@ -153,6 +153,48 @@
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  position: relative;  /* Add this */
+}
+
+/* Add these new styles */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+
+.scroll-button i {
+  color: #6f6f6f;
+  font-size: 16px;
+}
+
+.deals .scroll-button {
+  opacity: 1;
+}
+
+.scroll-button{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .section-header {
@@ -195,14 +237,11 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  /* Firefox */
   -ms-overflow-style: none;
-  /* IE and Edge */
 }
 
 .product-grid::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari and Opera */
 }
 
 .deals-ad {
@@ -265,7 +304,6 @@
 
 body {
   background-color: #f1f3f6;
-  /* Light gray background for the body */
 }
 
 @media (max-width: 768px) {
@@ -307,4 +345,9 @@ body {
 
 .fa-chevron-down {
   font-size: 11px;
+}
+
+.nav-item:hover .fa-chevron-down {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
