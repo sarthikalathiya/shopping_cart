@@ -102,7 +102,11 @@
 }
 
 .nav-links a i {
-    font-size: 16px;
+  font-size: 12px;
+}
+
+.nav-links a i.fa-shopping-cart {
+  font-size: 16px;
 }
 
 /* Category Navigation */
@@ -299,4 +303,8 @@ body {
   .nav-item {
     margin-right: 15px;
   }
+}
+
+.fa-chevron-down {
+  font-size: 11px;
 }
